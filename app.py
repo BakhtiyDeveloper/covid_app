@@ -6,9 +6,9 @@ from PIL import *
 import pathlib
 from decimal import Decimal
 
+plt = platform.system()
+if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
 
 
 st.title("Добро пожаловать 🙌")
