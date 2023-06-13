@@ -1,0 +1,1 @@
+This app classifies pneumonia based on x-ray images using convolutional neural networks
