@@ -11,12 +11,12 @@ if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 
 
-st.title("Добро пожаловать 🙌")
-st.header('Это приложение классифицирует пневмонию :blue[на основе рентгеновских изображений] с использованием :red[сверточных нейронных сетей] ⚕️')
+st.title("Hush kelibsiz!!! 🙌")
+st.header('Ushbu dastur :blue[sun'iy neyron tarmoqlari yordamida] :red[ko'krak qafasi rentgenogramma asosida] pnevmoniya kasalligini aniqlaydi⚕️')
 
 #загружаем изображении
 
-file_upload = st.file_uploader('Загрузить изображение', type= ['png', 'jpeg', 'gif', 'svg', 'jpg'])
+file_upload = st.file_uploader('Rentgenogramma tasvirini yuklash', type= ['png', 'jpeg', 'gif', 'svg', 'jpg'])
 
 if file_upload:
     st.image(file_upload)
@@ -25,15 +25,15 @@ if file_upload:
 
 
 
-result = st.button('Анализ изображение')
+result = st.button('Rentgenogramma tasvirini tahlil qilish ')
 if result:
     model = load_learner('Covid_19_model_new.pkl')
     pred, pred_id, probs = model.predict(img)
-    if probs [pred_id] * 100 > 90:
-        st.success(f'Предсказания: {pred}')
-        st.success(f'Вероятность: {probs [pred_id]*100/1}%')
+    if probs [pred_id] * 100 > 65:
+        st.success(f'Natija: {pred}')
+        st.success(f'Ehtimolligi: {probs [pred_id]*100/1}%')
     else:
-        st.info('Вы загружали изображении с ошибкой!!!!  Пожалуйста, попробуйте с другим изображением!!!')
+        st.info('Rentgenogramma tasvirida muammo bor!!! Iltimos boshqa tasvir bilan urunib ko'ring')
 
 
      #plotly
