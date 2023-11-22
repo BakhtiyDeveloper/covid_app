@@ -12,7 +12,7 @@ if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 
 st.title("Hush kelibsiz!!! 🙌")
-st.header('Ushbu dastur :blue[sun'iy neyron tarmoqlari yordamida] :red[ko'krak qafasi rentgenogramma asosida] pnevmoniya kasalligini aniqlaydi⚕️')
+st.header("Ushbu dastur :blue[sun'iy neyron tarmoqlari yordamida] :red[ko'krak qafasi rentgenogramma asosida] pnevmoniya kasalligini aniqlaydi⚕️")
 
 #загружаем изображении
 
@@ -33,7 +33,7 @@ if result:
         st.success(f'Natija: {pred}')
         st.success(f'Ehtimolligi: {probs [pred_id]*100/1}%')
     else:
-        st.info('Rentgenogramma tasvirida muammo bor!!! Iltimos boshqa tasvir bilan urunib ko'ring')
+        st.info("Rentgenogramma tasvirida muammo bor!!! Iltimos boshqa tasvir bilan urunib ko'ring")
 
 
      #plotly
